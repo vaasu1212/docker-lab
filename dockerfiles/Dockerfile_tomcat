@@ -1,0 +1,9 @@
+FROM ubuntu
+RUN apt-get -y update && apt-get -y upgrade
+RUN apt-get -y install openjdk-8-jdk wget
+RUN mkdir /opt/tomcat
+COPY tomcat.tar.gz /tmp 
+RUN cd /tmp && tar xvfz tomcat.tar.gz
+RUN cp -Rv /tmp/apache-tomcat-8.5.37/* /opt/tomcat/
+EXPOSE 8080
+CMD /opt/tomcat/bin/catalina.sh run

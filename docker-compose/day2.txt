@@ -1,0 +1,1000 @@
+   16  cd dockerlab/
+   17  ls -ltrh
+   18  more installDocker.sh 
+   19  clear
+   20  cd 
+   21  ls -lrh
+   22  ls -ltrh
+   23  ll
+   24  ls -ltrh
+   25  cd /
+   26  ls -ltrh
+   27  clear
+   28  docker 0v
+   29  docker -v
+   30  apt-get update
+   31  apt-get install openssh-server
+   32  ip addr show
+   33  clear
+   34  cat /etc/os-release 
+   35  clear
+   36  docker version
+   37  clear
+   38  sudo apt-get remove -y docker docker-engine docker.io docker-ce
+   39  sudo apt-get update
+   40  clear
+   41  sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+   42  clear
+   43  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   44  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   45  apt-get update 
+   46  apt-cache madison docker-ce | awk '{print $3}'
+   47  apt-get install docker=18.06.1~ce~3-0~ubuntu
+   48  cd /home/dockerlab/
+   49  ls -ltrh
+   50  more installDocker.sh 
+   51  clear
+   52  apt-get install docker-ce=18.06.1~ce~3-0~ubuntu
+   53  clear
+   54  docker version 
+   55  clear
+   56  cd /var/lib/docker/
+   57  ls -ltrh
+   58  cd 
+   59  clear
+   60  docker search tomcat 
+   61  clear
+   62  docker search ubuntu
+   63  clear
+   64  docker search alpine
+   65  clear
+   66  docker search rasberry
+   67  clear
+   68  docker pull tomcat
+   69  clear
+   70  docker pull alpine 
+   71  docker pull ubuntu
+   72  clear
+   73  docker images 
+   74  docker run tomcat 
+   75  clear
+   76  docker ps 
+   77  docker ps -a
+   78  docker run -d tomcat 
+   79  docker ps 
+   80  netstat -nap | grep 8080
+   81  clear
+   82  docker ps 
+   83  docker run -d -P tomcat 
+   84  docker ps 
+   85  docker run -d -P tomcat 
+   86  docker ps 
+   87  docker stop 07898258d8ef
+   88  dockr ps -a
+   89  docker ps -a
+   90  docker start 07898258d8ef
+   91  docker ps 
+   92  docker rm 07898258d8ef
+   93  docker rm -f 07898258d8ef
+   94  docker ps 
+   95  docker ps -a
+   96  clear
+   97  docker images 
+   98  docker ps -a
+   99  docker rm -f 8ba3e150e98f 371ab068adba 3328f6c52b68 3fca77085d6b 2226fd34d19b
+  100  docker ps 
+  101  docker ps -a
+  102  clear
+  103  docker images 
+  104  docker run -d ubuntu 
+  105  docker ps 
+  106  docker ps -a
+  107  clear
+  108  docker run -d ubuntu sleep 60 
+  109  docker ps
+  110  docker ps -a
+  111  clear
+  112  docker run -it ubuntu /bin/bash 
+  113  docker ps 
+  114  clear
+  115  docker ps 
+  116  docker commit -m "installed vim" d80611f77433 myubuntu
+  117  docker images 
+  118  docker ps -a
+  119  cd ..
+  120  ls -ltrh
+  121  cd /home/dockerlab/
+  122  cd docker-compose/
+  123  ls -ltrh
+  124  more compose.yml 
+  125  more docker-compose1.yml
+  126  more docker-compose1.yml 
+  127  ls -ltrh
+  128  more docker-compose2.yml 
+  129  more docker-compose-stack.yml 
+  130  vi docker-compose-stack.yml 
+  131  ls -ltrh
+  132  systemctl restart jenkins
+  133  ps -ef|grep java
+  134  which java
+  135  cd /home/aws/
+  136  ls -ltrh
+  137  clear
+  138  ssh -i ueokey.pem ubuntu@13.58.58.222
+  139  ssh -i ueokey.pem ubuntu@52.15.40.24
+  140  cd ..
+  141  cd dockerlab/
+  142  cd dockerfiles/
+  143  ls ltrh
+  144  ls -ltrh
+  145  mre Dockerfile_tomcat 
+  146  more Dockerfile_tomcat 
+  147  clear
+  148  cd /home/dockerlab/
+  149  ls -lrh
+  150  vi Dockerfile_nginx1
+  151  cd /home
+  152  mkdir jenkins
+  153  ls -ltrh
+  154  cd jenkins/
+  155  ls -ltrh
+  156  vi installJenkins.sh
+  157  which java
+  158  ps -ef|grep java
+  159  more /etc/profile
+  160  java -version
+  161  echo $JAVA_HOME
+  162  source /etc/profile
+  163  which java
+  164  cd /var/lib/
+  165  wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -O /tmp/maven.tgz
+  166  ll /tmp/maven.tgz 
+  167  tar -tvf /tmp/maven.tgz 
+  168  tar -xzf /tmp/maven.tgz -C .
+  169  ll apache-maven-3.6.0/
+  170  mvn -version
+  171  vi /etc/profile
+  172  source /etc/profile
+  173  mvn -version
+  174  cd /home/
+  175  ls -ltrh
+  176  mkdir aws
+  177  cd aws/
+  178  ls -ltrh
+  179  mv /tmp/ueokey.pem .
+  180  chmod 400 ueokey.pem 
+  181  ls -ltrh
+  182  clear
+  183  ssh -i ueokey.pem ubuntu@18.225.32.35
+  184  ssh -i ueokey.pem ubuntu@18.224.183.163
+  185  clear
+  186  docker -v
+  187  docker images 
+  188  cd /home/dockerlab/
+  189  ls -ltrh
+  190  more Dockerfile 
+  191  mv Dockerfile Dockerfile_nginx
+  192  ls ltrh
+  193  ls -ltrh
+  194  vi Dockerfile_tomcat
+  195  apt-get install vim
+  196  vi Dockerfile_tomcat
+  197  docker build -t mytomcat -f Dockerfile_tomcat .
+  198  docker images 
+  199  docker build -t mytomcat -f Dockerfile_nginx .
+  200  docker build -t mytomcat -f Dockerfile_tomcat .
+  201  docker images
+  202  docker rmi -f 1b070adf5cd6 757b0ab323ed
+  203  docker images 
+  204  docker build -t mynginx -f Dockerfile_nginx .
+  205  docker build -t mynginx:base -f Dockerfile_nginx .
+  206  docker images 
+  207  ls -ltrh
+  208  vi Dockerfile_nginx1 
+  209  docker build -t myapp:v1 -f Dockerfile_nginx1 .
+  210  docker images 
+  211  docker run -d -P myapp:v1
+  212  docker ps
+  213  vi index.html 
+  214  docker run -d -P myapp:v2
+  215  docker build -t myapp:v2 -f Dockerfile_nginx1 .
+  216  docker run -d -P myapp:v2
+  217  docker ps
+  218  docker images 
+  219  docker rmi -f 9f11d6fd1ba3 b3ea6dbc6814 a63c4c4d2464
+  220  docker ps
+  221  ./removeCont.sh 
+  222  docker rmi -f 9f11d6fd1ba3 b3ea6dbc6814 a63c4c4d2464
+  223  docker images 
+  224  ls -ltrh
+  225  mkdir dockerfiles
+  226  mv Dockerfile_* dockerfiles/
+  227  ls -ltrh
+  228  cd dockerfiles/
+  229  ls -ltrh
+  230  cd ..
+  231  ls -ltrh
+  232  more compose.yml 
+  233  mv compose.yml docker-compose/
+  234  ls -ltrh
+  235  more demo.txt 
+  236  rm demo.txt 
+  237  ls -ltrh
+  238  mv index.html dockerfiles/
+  239  ls -ltrh
+  240  cd dockerfiles/
+  241  ls -lrh
+  242  cd
+  243  clear
+  244  sudo add-apt-repository ppa:webupd8team/java
+  245  sudo apt-get update
+  246  apt-get install oracle-java8-installer
+  247  which java
+  248  cd /usr/lib/jvm/java-8-oracle/
+  249  ll
+  250  vi /etc/profile
+  251  source /etc/profile
+  252  which java
+  253  java -version
+  254  wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+  255  echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+  256  apt-get update
+  257  sudo apt-get install jenkins
+  258  ps -ef|grep jenkins
+  259  cat /var/lib/jenkins/secrets/initialAdminPassword
+  260  systemctl restart jenkins
+  261  ps -ef|grep jenkins
+  262  more /var/lib/jenkins/secrets/initialAdminPassword
+  263  whcih java
+  264  which java
+  265  cd /var/log/jenkins/
+  266  more jenkins.log 
+  267  ls -ltrh
+  268  cd ..
+  269  ls -ltrh
+  270  id jenkins
+  271  more /etc/sudoers
+  272  vi /etc/sudoers
+  273  su jenkins
+  274  clear
+  275  which java
+  276  docker ps
+  277  docker swarm init
+  278  cd /home/aws/
+  279  ls -ltrh
+  280  ssh -i ueokey.pem ubuntu@18.216.85.203
+  281  cd ..
+  282  cd dockerlab/
+  283  ls -ltrh
+  284  git init 
+  285  ls -al
+  286  git remote -v
+  287  git push 
+  288  git branch
+  289  git remote add https://github.com/lerndevops/dockerlab.git
+  290  ls -ltrh
+  291  ls -al
+  292  rm .git
+  293  rm -r .git
+  294  ls -ltrh
+  295  git init 
+  296  git add .
+  297  git commit -m "new lab files"
+  298  git config --global user.email "lerndevops@gmail.com"
+  299  git config --global user.name "lerndevops"
+  300  git remote add origin https://github.com/lerndevops/docker-lab.git
+  301  git push -u origin master
+  302  git branch
+  303  git init
+  304  git add .
+  305  git commit -m "new lab files"
+  306  git push origin master
+  307  cd /home/aws/
+  308  ssh -i ueokey.pem ubuntu@18.216.85.203
+  309  docker images 
+  310  cd ..
+  311  cd dockerlab/
+  312  cd dockerfiles/
+  313  ls -ltsh
+  314  docker -build -t myapp:base -f Dockerfile_tomcat .
+  315  docker build -t myapp:base -f Dockerfile_tomcat .
+  316  ls -ltrh
+  317  cp -p Dockerfile_tomcat dockerfile_myapp
+  318  vi dockerfile_myapp 
+  319  docker images 
+  320  docker tag 33676a4a1db4 nareshmnvs/tomcat:myappv1
+  321  docker images 
+  322  docker login 
+  323  docker push nareshmnvs/tomcat:myappv1
+  324  docker images 
+  325  vi dockerfile_myapp 
+  326  docker ps
+  327  more dockerfile_myapp 
+  328  docker images 
+  329  docker rm de0fa7866281 33676a4a1db4
+  330  docker rmi -f de0fa7866281 33676a4a1db4
+  331  docker ps
+  332  docker rm -f a4d1deb567a0
+  333  docker rmi -f de0fa7866281 33676a4a1db4
+  334  docker images 
+  335  apt-add-repository ppa:ansible/ansible
+  336  apt-get install -y ansible
+  337  docker logout
+  338  docker login -u nareshmnvs -p mnvs@1234
+  339  docker login -u nareshmnvs --password-stdin mnvs@1234
+  340  docker login -u nareshmnvs --password-stdin
+  341  docker login -u nareshmnvs
+  342  docker logout
+  343  docker login -u nareshmnvs -p Jabra@1234
+  344  ll /etc/ansible/
+  345  cd ..
+  346  ls -ltrh
+  347  cd ..
+  348  ls -ltrh
+  349  mkdir ansible
+  350  cd dockerlab/
+  351  cd ..
+  352  ls ltrh
+  353  cd ansible/
+  354  cp -p /etc/ansible/* .
+  355  ls -ltrh
+  356  > hosts 
+  357  vi ansible.cfg 
+  358  ll
+  359  vi hosts
+  360  vi addressbook-deploy.yml
+  361  ls -ltrh
+  362  ansible -i hosts -m ping -u devops -k
+  363  ansible -i hosts all -m ping -u devops -k
+  364  ansible -i hosts all -m ping -u devops -k -c paramiko
+  365  more addressbook-deploy.yml 
+  366  vi addressbook-deploy.yml 
+  367  id jenkins
+  368  more /etc/sudoers
+  369  su - jenkins
+  370  ls -ltrh
+  371  chown jenkins:jenkins *
+  372  cd ..
+  373  chown jenkins:jenkins ansible/
+  374  ls -ltrh
+  375  cd ansible/
+  376  ls -ltrh
+  377  ps -ef|grep jenkins
+  378  cd ..
+  379  cd dockerlab/dockerfiles/
+  380  ls ltrh
+  381  ls -ltrh
+  382  more dockerfile_myapp 
+  383  docker images 
+  384  docker build -t mytomcat -f Dockerfile_tomcat .
+  385  docker images
+  386  docker tag nareshmnvs/tomcat:8.5 mytomcat
+  387  docker tag mytomcat nareshmnvs/tomcat:8.5
+  388  docker images 
+  389  docker push nareshmnvs/tomcat:8.5
+  390  ls -ltrh
+  391  cp Dockerfile_tomcat Dockerfile_addressbook
+  392  vi Dockerfile_addressbook 
+  393  docker build -t mytomcat -f Dockerfile_tomcat /var/lib/jenkins/workspace/job5-package/target
+  394  docker images 
+  395  docker rmi 808b0fe280ff
+  396  docker rmi -f 808b0fe280ff
+  397  docker images 
+  398  ls -ltrh
+  399  docker logout
+  400  cd ..
+  401  cd ansible/
+  402  ls -ltrh
+  403  ore addressbook-deploy.yml 
+  404  more addressbook-deploy.yml 
+  405  su - jenkins
+  406  ls -al 
+  407  cd /var/lib/jenkins/
+  408  ll
+  409  ll -ld .ansible/
+  410  chown -R jenkins:jenkins .ansible/
+  411  su - jenkins 
+  412  docker ps
+  413  docker images 
+  414  docker rmi 877d5433c306
+  415  docker rmi -f 877d5433c306
+  416  docker ps 
+  417  docker images 
+  418  clear
+  419  cd /home/dockerlab/
+  420  ll
+  421  cd dockerfiles/
+  422  ls ltrh
+  423  clear
+  424  ls -ltrh
+  425  vi Dockerfile_tomcat
+  426  docker images 
+  427  docker build -t mytomcat -f Dockerfile_tomcat . 
+  428  clear
+  429  docker images 
+  430  ls -ltrh
+  431  vi Dockerfile_addressbook
+  432  docker images 
+  433  clear
+  434  docker login 
+  435  docker images 
+  436  clear
+  437  docker images 
+  438  docker tag 06f4851022d0 nareshmnvs/tomcat:9.0
+  439  docker images 
+  440  docker push nareshmnvs/tomcat:9.0
+  441  clear
+  442  ls -ltrh
+  443  vi Dockerfile_nginx
+  444  docker build -t mynginx -f Dockerfile_nginx .
+  445  docker ps
+  446  docker images 
+  447  docker run -d -P mynginx
+  448  docker ps
+  449  docker run -d -p 9080:80 mynginx
+  450  docker ps
+  451  vi index.html 
+  452  ls -ltrh
+  453  docker run -d -p 9081:80 -v /home/dockerlab/dockerfiles:/var/www/html/ mynginx
+  454  docker ps
+  455  vi index.html 
+  456  curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose 
+  457  docker-compose -v
+  458  chmod 755 /usr/local/bin/docker-compose
+  459  docker-compose -v
+  460  uname
+  461  uname -s
+  462  cd ..
+  463  ls -ltrh
+  464  cd docker-compose/
+  465  ls -ltrh
+  466  vi compose.yml 
+  467  docker-compose -f compose.yml up -d
+  468  docker ps 
+  469  docker-compose -f compose.yml up -d --scale web=2 --scale app=4 --scale db=2
+  470  docker ps 
+  471  ls -ltrh
+  472  vi compose.yml 
+  473  docker ps 
+  474  clear
+  475  docker info 
+  476  docker swarm leave --force
+  477  docker info 
+  478  clear
+  479  docker info
+  480  docker swarm init
+  481  docker node ls
+  482  clear
+  483  docker node ls
+  484  docker swarm init
+  485  docker node ls
+  486  docker
+  487  docker swarm 
+  488  docker swarm join-token worker
+  489  docker node ls
+  490  ifconfig
+  491  clear
+  492  docker ps 
+  493  cd ..
+  494  ls -ltrh
+  495  ./removeCont.sh 
+  496  clear
+  497  docker ps
+  498  docker service create --name mysvc --replicas 4 -p 9080:8080 tomcat
+  499  docker ps
+  500  docker service ls
+  501  clear
+  502  docker service ls
+  503  docker ps
+  504  docker service create --name myapp --replicas 4 -p 9081:3000 nareshmnvs/myapp:v1
+  505  docker service ls
+  506  docker service ps myapp
+  507  docker ps
+  508  docker ps
+  509  docker service ls
+  510  docker service rm myapp
+  511  docker service rm mysvc
+  512  docker service ls
+  513  docker ps
+  514  docker images
+  515  docker pull windows
+  516  docker search windows
+  517  docker pull microsoft/windowsservercore
+  518  docker images 
+  519  docker pull nginx
+  520  docker images 
+  521  docer rmi -f 06f4851022d0
+  522  docker rmi -f 06f4851022d0
+  523  docker images 
+  524  docker pull nareshmnvs/tomcat:9.0
+  525  docker images 
+  526  cd //home
+  527  ls -ltrh
+  528  cd a
+  529  cd aws/
+  530  ls -ltrh
+  531  ssh -i ueokey.pem ubuntu@13.58.59.128
+  532  cd ..
+  533  ll
+  534  mv /tmp/scripts .
+  535  ls -ltrh
+  536  cd scripts/
+  537  ls -ltrh
+  538  ./setupK8s-Node-ubuntu.sh 
+  539  ls -ltrh
+  540  ./setupK8s-Node-ubuntu.sh
+  541  vi setupK8s-Node-ubuntu.sh
+  542  vi setupK8s-Node-ubuntu.sh 
+  543  ./setupK8s-Node-ubuntu.sh 
+  544  apt-get install dos2unix
+  545  dos2unix setupK8s-Node-ubuntu.sh 
+  546  ./setupK8s-Node-ubuntu.sh 
+  547  kubeadm join 192.168.47.131:6443 --token 8gkkys.73eqi8rwz5xtgo6g --discovery-token-ca-cert-hash sha256:50670194acd7000bdce46978ed9310ac4065a0a498017cc1e77249dd6189f9f3
+  548  swapoff -a
+  549  free -m
+  550  kubeadm join 192.168.47.131:6443 --token 8gkkys.73eqi8rwz5xtgo6g --discovery-token-ca-cert-hash sha256:50670194acd7000bdce46978ed9310ac4065a0a498017cc1e77249dd6189f9f3
+  551  ls -ltrh
+  552  vi setupK8s-Node-ubuntu.sh 
+  553  kubectl 
+  554  kubectl explain
+  555  vi setupK8s-Node-ubuntu.sh 
+  556  ./setupK8s-Node-ubuntu.sh 
+  557  docker ps
+  558  kubectl 
+  559  kubeadm join 192.168.47.131:6443 --token fsxut0.svw5opgbpt0thjap --discovery-token-ca-cert-hash sha256:7b03f4c63dd4e4fd40fe17115aa7f9d72afac70c46867a921e5962d1a9b4b398
+  560  ps -ef|grep kubelet
+  561  ip link
+  562  clear
+  563  ifconfig
+  564  cat /sys/class/dmi/id/product_uuid
+  565  clear
+  566  kubeadm join 192.168.47.131:6443 --token 4t0x4m.m3vl7wwzhh1pxdre --discovery-token-ca-cert-hash sha256:04d76ae9be3a795b6d490a3ffa769965420d055304359355ae442730743e8894
+  567  kubeadm reset -f
+  568  ps -ef|grep kubelet
+  569  kubeadm join 192.168.47.131:6443 --token 4t0x4m.m3vl7wwzhh1pxdre --discovery-token-ca-cert-hash sha256:04d76ae9be3a795b6d490a3ffa769965420d055304359355ae442730743e8894
+  570  kubeadm reset -f
+  571  docker ps
+  572  cd /home/aws/
+  573  ssh -i ueokey.pem ubuntu@13.58.59.128
+  574  cd /home/aws/
+  575  ls -ltrh
+  576  ssh -i ueokey.pem ubuntu@18.188.91.93
+  577  docker ps | grep hello
+  578  docker ps 
+  579  ssh -i ueokey.pem ubuntu@18.188.91.93
+  580  cd /home/aws/
+  581  cd ..
+  582  scp -r aws devops@192.168.47.130:/tmp
+  583  scp -r aws devops@192.168.47.131:/tmp
+  584  cd aws/
+  585  ls -ltrh
+  586  ssh -i ueokey.pem ubuntu@18.224.62.147
+  587  scp -i ueokey.pem ubuntu@18.191.150.244:/tmp/config .
+  588  ls -ltrh
+  589  cp config /tmp
+  590  chmod 755 /tmp/config
+  591  chmod 777 /tmp/config
+  592  ps -ef|grep jenkins
+  593  cd ..
+  594  ls -ltrh
+  595  cd ansible/
+  596  ll
+  597  cd ..
+  598  ls -ltrh
+  599  cd jenkins/
+  600  ls -ltrh
+  601  more installJenkins.sh 
+  602  cd ..
+  603  ls -ltrh
+  604  cd dockerlab
+  605  ls -ltrh
+  606  cd ..
+  607  ls -ltrh
+  608  cd dockerlab
+  609  cd docker
+  610  cd dockerfiles/
+  611  ls -ltrh
+  612  more Dockerfile_addressbook 
+  613  docker ps 
+  614  docker images 
+  615  docker pull ubuntu
+  616  docker ps
+  617  service docker stop
+  618  cd /var/lib/
+  619  rm -rf docker
+  620  apt-get remove docker-ce
+  621  docker ps
+  622  cd /home/dockerlab
+  623  ./installDocker.sh 
+  624  docker pull ubuntu
+  625  id jenkins
+  626  su jenkins 
+  627  clear
+  628  ps -ef|grep jenkins
+  629  cd /home
+  630  cd scritps
+  631  clear
+  632  dos2unix *.sh
+  633  clear
+  634  docker ps
+  635  ps -ef|grep java
+  636  cd /var/lib/jenkins/workspace/job5-package/
+  637  ll
+  638  cd target/
+  639  ll
+  640  cd 
+  641  clear
+  642  ps -ef|grep jenkins
+  643  cd /home/dockerlab/dockerfiles/
+  644  ls -ltrh
+  645  clear
+  646  vi Dockerfile_addressbook
+  647  cd ..
+  648  ls -ltrh
+  649  cd ansible/
+  650  ls -ltrh
+  651  more hosts 
+  652  vi addressbook-deploy.yml
+  653  clear
+  654  docker images 
+  655  ls -ltrh
+  656  more hosts 
+  657  vi addressbook-deploy.yml 
+  658  exit
+  659  git
+  660  clear
+  661  ls -ltrh
+  662  cd ..
+  663  ls -ltrh
+  664  cd scripts/
+  665  ls -ltrh
+  666  cd /
+  667  ls -ltrh
+  668  cd 
+  669  ll
+  670  cd /
+  671  ls -ltrh
+  672  cd /ome
+  673  cd /home
+  674  ls -ltrh
+  675  cd /tmp
+  676  ls -ltrh
+  677  init 0
+  678  docker ps
+  679  docker ps 
+  680  docker images
+  681  docker run -d -P nareshmnvs/addressbook:v2 
+  682  docker ps
+  683  docker rm -f 0e105396f48a
+  684  docker ps
+  685  cd /tmp
+  686  ls -ltrh
+  687  chmod 755 test.jar
+  688  java -version
+  689  ls -ltrh
+  690  cd /home/
+  691  mkdir selenium
+  692  mv /tmp/test.jar .
+  693  mv /tmp/chromedriver_linux64.zip .
+  694  cd selenium/
+  695  mv ../test.jar .
+  696  mv ../chromedriver_linux64.zip .
+  697  ls -ltrh
+  698  unzip chromedriver_linux64.zip 
+  699  ls -ltrh
+  700  mv /tmp/test-linux.jar .
+  701  ls -ltrh
+  702  chmod 755 test-linux.jar 
+  703  ls -ltrh
+  704  sudo apt install chromium-browser
+  705  sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+  706  sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+  707  sudo apt-get -y update
+  708  sudo apt remove chromium-browser
+  709  sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
+  710  sudo apt-get -y install google-chrome-stable
+  711  ll /usr/bin/chromium-browser
+  712  ll /usr/bin/google-chrome
+  713  ps -ef|grep chrome
+  714  /usr/bin/google-chrome
+  715  /usr/bin/google-chrome --no-sandbox
+  716  clear
+  717  docker ps
+  718  docker images 
+  719  docker rmi -f 30c88c926a6a 0d9d95f56981
+  720  docker images 
+  721  clear
+  722  docker images 
+  723  docker images
+  724  docker history ubuntu
+  725  clear
+  726  docker images
+  727  docker run -itd 1d9c17228a9e
+  728  docker ps 
+  729  docker exec -it acad9eab72ad /bin/bash
+  730  docker ps
+  731  clear
+  732  docker images 
+  733  docker ps
+  734  docker commit -m "create a file" acad9eab72ad myubuntu
+  735  docker images 
+  736  docker history myubuntu
+  737  clear
+  738  docker images
+  739  docker run -it ubuntu /bin/bash
+  740  docker ps 
+  741  docker commit -m "installed webserver" 068d524f7c33 nginx-webserver
+  742  docker images 
+  743  docker run -d -P nginx-webserver
+  744  docker ps 
+  745  docker run -d -P nginx-webserver
+  746  docker ps -a
+  747  docker run -d -P nginx-webserver sleep 60
+  748  docker ps -a
+  749  history
+  750  clear
+  751  docker commit -m "installed webserver" -c 'CMD /usr/sbin/nginx -g "daemon off;"' 068d524f7c33 nginx-webserver1
+  752  docker images 
+  753  docker run -d -P nginx-webserver1
+  754  docker ps
+  755  docker run -d -p 8080:80 nginx-webserver1
+  756  docker run -d -p 8088:80 nginx-webserver1
+  757  docker ps 
+  758  hostname -i
+  759  history
+  760  ll /usr/bin/docker
+  761  docker 
+  762  history
+  763  cd /home
+  764  cd dockerlab
+  765  ls -ltrh
+  766  cd dockerfiles/
+  767  ls -ltrh
+  768  more Dockerfile_addressbook 
+  769  cd /var/log/
+  770  ls -ltrh
+  771  less syslog
+  772  docker ps
+  773  docker ps -a
+  774  docker logs d9463433e425
+  775  docker inspect d9463433e425
+  776  cd /var/lib/docker
+  777  ls -ltrh
+  778  cd container
+  779  cd containers/
+  780  ls -ltrh
+  781  cd 6ced4849b5feeb8cdaed1ee111bf8985e43d3202a759d5480f1dfff0325bb103
+  782  ls -tlrh
+  783  less 6ced4849b5feeb8cdaed1ee111bf8985e43d3202a759d5480f1dfff0325bb103-json.log
+  784  cd ..
+  785  ls -ltrh
+  786  cd ..
+  787  ls -ltrh
+  788  cd ..
+  789  ls -ltrh
+  790  clear
+  791  cd /home/dockerlab/dockerfiles/
+  792  ls -ltrh
+  793  vi Dockerfile_nginx
+  794  docker build -t mynginx -f Dockerfile_nginx .
+  795  docker images 
+  796  more index.html 
+  797  docker run -d -p 9090:80 mynginx
+  798  docker ps 
+  799  ls -ltrh
+  800  more Dockerfile_nginx
+  801  ls -ltrh
+  802  more Dockerfile_nginx
+  803  mkdir test 
+  804  ls -ltrh
+  805  mkdir test/ravi
+  806  cd test/ravi/
+  807  cd ..
+  808  ls -ltrh
+  809  rm -r test
+  810  clear
+  811  docker ps
+  812  docker rm -f 4b90e5c413e8 6ced4849b5fe 665c670b03a9 068d524f7c33 acad9eab72ad
+  813  docker ps
+  814  docker images 
+  815  docker pull tomcat 
+  816  docker images 
+  817  docker run -d tomcat
+  818  docker run -d mynginx
+  819  clear
+  820  docker ps
+  821  ls -ltrh
+  822  vi Dockerfile_nginx
+  823  docker build -t mynginx1 -f Dockerfile_nginx .
+  824  docker images 
+  825  docker run -d mynginx1
+  826  clear
+  827  docker ps
+  828  docker build -t mynginx1 -f Dockerfile_nginx .
+  829  docker build -t mynginx -f Dockerfile_nginx .
+  830  docker images
+  831  docker run -d nginx-webserver1
+  832  docker ps
+  833  docker run -d -p 6789:80 nginx-webserver1
+  834  docker ps
+  835  docker run -d -p 6789:80 nginx-webserver1
+  836  docker run -d -p 8767:80 nginx-webserver1
+  837  docker ps
+  838  docker run -d -P nginx-webserver1
+  839  docker ps
+  840  docker run -d -P mynginx1 
+  841  docker ps
+  842  ls -ltrh
+  843  more Dockerfile_nginx
+  844  history
+  845  docker -v
+  846  cd /tmp
+  847  docker ps 
+  848  cd /usr/bin/
+  849  ./docker -v
+  850  echo $PATH
+  851  clear
+  852  docker images 
+  853  docker pull tomcat:8
+  854  docker images 
+  855  docker pull tomcat:8.5-alpine
+  856  docker images 
+  857  cd /home/dockerlab/dockerfiles/
+  858  ls -ltrh
+  859  docker build -t mynewimage:v1 -f Dockerfile_nginx .
+  860  docker images 
+  861  clear
+  862  docker images 
+  863  docker info 
+  864  docker login 
+  865  docker logout
+  866  docker login 
+  867  docker images 
+  868* docker push mynewimage:v4
+  869  docker tag b71493aad604 ravindramca43/myrepo:v1
+  870  docker images 
+  871  docker push ravindramca43/myrepo:v1
+  872  docker tag b71493aad604 ravindramca43/myrepo:v4
+  873  docker images 
+  874  docker push ravindramca43/myrepo:v4
+  875  docker tag b71493aad604 ravindramca43/myrepo
+  876  docker images 
+  877  docker push ravindramca43/myrepo
+  878  clear
+  879  history
+  880  docker images 
+  881  docker rmi -f b71493aad604
+  882  cd ..
+  883  ./removeCont.sh 
+  884  ls -ltrh
+  885  clear
+  886  docker images 
+  887  docker rmi -f b71493aad604
+  888  docker images 
+  889  docker pull ravindramca43/myrepo
+  890  docker pull ravindramca43/myrepo:v1
+  891  docker search tomcat
+  892  docker pull aallam/tomcat-mysql
+  893  docker search registry
+  894  docker pull registry
+  895  docker images 
+  896  docker run -d -P registry
+  897  docker ps
+  898  clear
+  899  docker ps 
+  900  docker images 
+  901  docker tag 1f333e3867c6 192.168.40.128/ubuntu:v1
+  902  docker images 
+  903  docker push 192.168.40.128/ubuntu:v1
+  904  docker tag 1f333e3867c6 localhost:32769/ubuntu:v1
+  905  docker push localhost:32769/ubuntu:v1
+  906  docker ps 
+  907  docker images
+  908  docker rm 1f333e3867c6
+  909  docker rmi -f 1f333e3867c6
+  910  docker ps 
+  911  docker images 
+  912  docker pull localhost:32769/ubuntu:v1
+  913  docker ps
+  914  docker images 
+  915  clear
+  916  df -h
+  917  clear
+  918  docker images 
+  919  docker pull nginx 
+  920  clear
+  921  docker images 
+  922  docker run -d -P nginx-webserver1
+  923  docker ps 
+  924  docker rm -f a68f006f0988 623cb2102557
+  925  docker run -d -p 8090:80 nginx-webserver1
+  926  docker ps
+  927  ls -ltrh
+  928  cd dockerfiles/
+  929  ls -ltrh
+  930  vi index.html 
+  931  docker run -d -p -v /home/dockerlab/dockerfiles:/var/www/html/ 8000:80 nginx-webserver1
+  932  docker run -d -p 8000:80 -v /home/dockerlab/dockerfiles:/var/www/html/ nginx-webserver1
+  933  docker ps
+  934  ls -ltrh
+  935  vi index.html 
+  936  docker volume create myvol
+  937  docker run -d -p 8001:80 -v myvol:/var/www/html/ nginx-webserver1
+  938  docker ps 
+  939  cd /var/lib/docker/volumes/
+  940  ls -ltrh
+  941  cd myvol/
+  942  ls -ltrh
+  943  cd _data/
+  944  ls -ltrh
+  945  clear
+  946  docker volume create newvol
+  947  cd ..
+  948  ls -ltrh
+  949  cd newvol/
+  950  ll
+  951  cd _data/
+  952  ls -ltrh
+  953  clear
+  954  cd /home/dockelab
+  955  cd 
+  956  cd /home/dockerlab
+  957  ls -ltrh
+  958  clear
+  959  ls -ltrh
+  960  docker ps
+  961  docker rm -f 55422dc58d17 f8c0ae95042f e0cd766727e4
+  962  clear
+  963  docker ps
+  964  docker run -d -P registry
+  965  docker ps
+  966  docker images
+  967  docker tag 7042885a156a localhost:32770/nginx:v1
+  968  docker images 
+  969  docker push localhost:32770/nginx:v1
+  970  docker ps 
+  971  docker exec -it 0033b74f687f
+  972  docker exec -it 0033b74f687f /bin/bash
+  973  docker exec -it 0033b74f687f /bin/sh
+  974  clear
+  975  docker images 
+  976  docker save -o /tmp/tomcat.tgz 2f4d8973ada1
+  977  ls -ltrh /tmp/tomcat.tgz 
+  978  scp /tmp/tomcat.tgz devops@192.168.40.129:/tmp
+  979  clear
+  980  curl -L https://github.com/docker/compose/releases/download/1.23.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose 
+  981  docker-compose -v
+  982  cd docker-compose/
+  983  ls -ltrh
+  984  clear
+  985  ls -ltrh
+  986  vi compose.yml
+  987  docker ps 
+  988  docker rm -f 0033b74f687f
+  989  docker ps
+  990  docker-compose up -d
+  991  docker-compose -f compose.yml up -d
+  992  docker ps 
+  993  docker-compose -f compose.yml --scale web=2 --scale app=4 --scale db=3 up -d
+  994  docker-compose -f compose.yml up --scale web=2 --scale app=4 --scale db=3 -d 
+  995  vi compose.yml 
+  996  docker-compose -f compose.yml up --scale web=2 --scale app=4 --scale db=3 -d 
+  997  docker ps
+  998  docker-compose -f compose.yml up --scale web=4 --scale app=8 --scale db=6 -d 
+  999  vi compose.yml 
+ 1000  docker ps 
+ 1001  docker-compose down -f compose.yml 
+ 1002  docker-compose  -f compose.yml down
+ 1003  docker ps
+ 1004  docker network ls
+ 1005  ls -lth
+ 1006  more compose.yml 
+ 1007  ls -ltrh
+ 1008  vi docker-compose1.yml
+ 1009  vi docker-compose-stack.yml
+ 1010  docker ps
+ 1011  docker-compose -f compose.yml up --scale web=4 --scale app=8 --scale db=6 -d 
+ 1012  docker ps
+ 1013  docker ps | grep tomcat
+ 1014  history
+ 1015  history > day2.txt
